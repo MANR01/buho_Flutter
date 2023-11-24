@@ -1,8 +1,8 @@
 // ignore_for_file: file_names, camel_case_types
 
 import 'package:flutter/material.dart';
-import 'campos/fechAnterior.dart';
-import 'campos/fechPosterior.dart';
+import 'components/fechAnterior.dart';
+import 'components/fechPosterior.dart';
 
 class setCampos extends StatelessWidget {
   static final _formKey = GlobalKey<FormState>(debugLabel: 'fechas');

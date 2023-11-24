@@ -1,7 +1,8 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, avoid_unnecessary_containers
 
-import 'package:buho/Pages/home/components/setCampos.dart';
+import 'package:buho/Pages/home/components/campos/setCampos.dart';
 import 'package:flutter/material.dart';
+//import 'components/tablaFirebase/tablaFirebase.dart';
 
 class home extends StatelessWidget {
   const home({super.key});
@@ -21,7 +22,7 @@ class home extends StatelessWidget {
             //Mensaje de Bienvenida
             Text(
               'Bienvenido',
-              style: TextStyle(fontSize: 18, color: Colors.black),
+              style: TextStyle(fontSize: 20, color: Colors.black),
             ),
             SizedBox(
               height: 15,
@@ -30,7 +31,7 @@ class home extends StatelessWidget {
             //Indicaciones
             Text('Ingrese las fechas a consultar',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
                   color: Colors.black,
                 )),
             SizedBox(
@@ -38,6 +39,10 @@ class home extends StatelessWidget {
             ),
             //Llamado al metodo encargado de mostrar los campos de fecha
             setCampos(),
+            SizedBox(height: 25),
+
+            //Tabla con la informacion de Firebase
+            Text('Tabla')
           ],
         ),
       ),

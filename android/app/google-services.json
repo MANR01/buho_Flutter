@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "791898710974",
+    "project_id": "buho-837ce",
+    "storage_bucket": "buho-837ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791898710974:android:0ae8f6188497dc0e33cfef",
+        "android_client_info": {
+          "package_name": "com.example.buho"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8egN45YBqeVfHRsfWtGW0fwCgNDnxRyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
