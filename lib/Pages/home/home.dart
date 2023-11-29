@@ -14,37 +14,39 @@ class home extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.purple[200],
       ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            //Mensaje de Bienvenida
-            Text(
-              'Bienvenido',
-              style: TextStyle(fontSize: 20, color: Colors.black),
-            ),
-            SizedBox(
-              height: 15,
-            ),
+      body: const Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          SizedBox(
+            height: 25,
+          ),
+          //Mensaje de Bienvenida
+          Text(
+            'Bienvenido',
+            style: TextStyle(fontSize: 20, color: Colors.black),
+          ),
+          SizedBox(
+            height: 15,
+          ),
 
-            //Indicaciones
-            Text('Ingrese las fechas a consultar',
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.black,
-                )),
-            SizedBox(
-              height: 25,
-            ),
-            //Llamado al metodo encargado de mostrar los campos de fecha
-            setCampos(),
-            SizedBox(height: 25),
+          //Indicaciones
+          Text('Ingrese las fechas a consultar',
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.black,
+              )),
+          SizedBox(
+            height: 25,
+          ),
+          //Llamado al metodo encargado de mostrar los campos de fecha
+          setCampos(),
+          SizedBox(height: 25),
 
-            //Tabla con la informacion de Firebase
-            Text('Tabla')
-          ],
-        ),
+          //Tabla con la informacion de Firebase
+          Text('Tabla')
+          //firebaseTable()
+        ],
       ),
     );
   }

@@ -22,7 +22,7 @@ class setCampos extends StatelessWidget {
       child: Form(
         key: _formKey,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.max,
           children: [
             //Fecha Anterior
