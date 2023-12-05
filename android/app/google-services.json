@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "791898710974",
+    "firebase_url": "https://buho-837ce-default-rtdb.firebaseio.com",
     "project_id": "buho-837ce",
     "storage_bucket": "buho-837ce.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:791898710974:android:0ae8f6188497dc0e33cfef",
+        "mobilesdk_app_id": "1:791898710974:android:8c2d2b21ef58d8e033cfef",
         "android_client_info": {
           "package_name": "com.example.buho"
         }
