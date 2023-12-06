@@ -1,11 +1,11 @@
-// ignore_for_file: file_names, camel_case_types
+// ignore_for_file: file_names, camel_case_types, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class setFechAn extends StatelessWidget {
-  final bool obscureText;
-  const setFechAn({super.key, required this.obscureText});
+  final controller;
+  const setFechAn({super.key, this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class setFechAn extends StatelessWidget {
         inputFormatters: [fechmask],
         keyboardType: TextInputType.datetime,
         textAlign: TextAlign.center,
-        obscureText: obscureText,
+        controller: controller,
         style: const TextStyle(fontSize: 14, color: Colors.black),
         decoration: const InputDecoration(
             hintText: "DD/MM/AAAA",

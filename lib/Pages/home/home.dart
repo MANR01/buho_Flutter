@@ -2,7 +2,7 @@
 
 import 'package:buho/Pages/home/components/campos/setCampos.dart';
 import 'package:flutter/material.dart';
-//import 'components/tablaFirebase/tablaFirebase.dart';
+import 'components/tablaFirebase/tablaFirebase.dart';
 
 class home extends StatelessWidget {
   const home({super.key});
@@ -14,38 +14,37 @@ class home extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.purple[200],
       ),
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           //Mensaje de Bienvenida
-          Text(
+          const Text(
             'Bienvenido',
             style: TextStyle(fontSize: 20, color: Colors.black),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
 
           //Indicaciones
-          Text('Ingrese las fechas a consultar',
+          const Text('Ingrese las fechas a consultar',
               style: TextStyle(
                 fontSize: 18,
                 color: Colors.black,
               )),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           //Llamado al metodo encargado de mostrar los campos de fecha
           setCampos(),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
 
           //Tabla con la informacion de Firebase
-          Text('Tabla')
-          //firebaseTable()
+          const firebaseTable()
         ],
       ),
     );

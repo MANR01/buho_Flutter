@@ -6,7 +6,9 @@ import 'components/fechPosterior.dart';
 
 class setCampos extends StatelessWidget {
   static final _formKey = GlobalKey<FormState>(debugLabel: 'fechas');
-  const setCampos({super.key});
+  final TextEditingController fechAn = TextEditingController();
+  final TextEditingController fechPos = TextEditingController();
+  setCampos({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +28,13 @@ class setCampos extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           children: [
             //Fecha Anterior
-            const setFechAn(
-              obscureText: false,
+            setFechAn(
+              controller: fechAn,
             ),
             const SizedBox(height: 25),
             //Fecha Posterior
-            const setFechPos(
-              obscureText: false,
+            setFechPos(
+              controller: fechPos,
             ),
             const SizedBox(height: 25),
             Container(
