@@ -1,6 +1,9 @@
 {
   "rules": {
-    ".read": true,
-    ".write": false
+    "maquina": {
+      ".indexOn": "fecha",
+      ".read": true,
+      ".write": false
+    }
   }
 }

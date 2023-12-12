@@ -14,38 +14,40 @@ class home extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.purple[200],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          const SizedBox(
-            height: 25,
-          ),
-          //Mensaje de Bienvenida
-          const Text(
-            'Bienvenido',
-            style: TextStyle(fontSize: 20, color: Colors.black),
-          ),
-          const SizedBox(
-            height: 15,
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            const SizedBox(
+              height: 25,
+            ),
+            //Mensaje de Bienvenida
+            const Text(
+              'Bienvenido',
+              style: TextStyle(fontSize: 20, color: Colors.black),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
 
-          //Indicaciones
-          const Text('Ingrese las fechas a consultar',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.black,
-              )),
-          const SizedBox(
-            height: 25,
-          ),
-          //Llamado al metodo encargado de mostrar los campos de fecha
-          setCampos(),
-          const SizedBox(height: 25),
+            //Indicaciones
+            const Text('Ingrese las fechas a consultar',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black,
+                )),
+            const SizedBox(
+              height: 25,
+            ),
+            //Llamado al metodo encargado de mostrar los campos de fecha
+            setCampos(),
+            const SizedBox(height: 25),
 
-          //Tabla con la informacion de Firebase
-          const firebaseTable()
-        ],
+            //Tabla con la informacion de Firebase
+            const firebaseTable()
+          ],
+        ),
       ),
     );
   }

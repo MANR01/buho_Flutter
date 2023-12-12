@@ -1,5 +1,6 @@
 // ignore_for_file: file_names, camel_case_types
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'components/fechAnterior.dart';
 import 'components/fechPosterior.dart';
@@ -41,7 +42,14 @@ class setCampos extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 30),
               width: MediaQuery.of(context).size.width - 80,
               child: OutlinedButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                  } else {
+                    if (kDebugMode) {
+                      print("Ocurrio un error al verificar los campos");
+                    }
+                  }
+                },
                 icon: const Icon(Icons.search),
                 style: elevatedButtonStyle,
                 label: const Text('Buscar'),

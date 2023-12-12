@@ -31,6 +31,12 @@ class setFechAn extends StatelessWidget {
               style: TextStyle(color: Colors.black87),
             ),
             prefixIcon: Icon(Icons.date_range_rounded)),
+        validator: (value) {
+          if (value!.isEmpty) {
+            return "Campo vacio";
+          }
+          return null;
+        },
       ),
     );
   }

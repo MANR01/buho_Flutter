@@ -12,47 +12,31 @@ class firebaseTable extends StatefulWidget {
 }
 
 class _firebaseTableState extends State<firebaseTable> {
-  Query queryFirebase = FirebaseDatabase.instance
-      .ref()
-      .child('1')
-      .orderByChild('fecha')
-      .startAfter('04/12/2023')
-      .endAt('06/12/2023');
+  final queryFirebase = FirebaseDatabase.instance
+      .ref('maquina')
+      .startAt('12/03/2023')
+      .endAt('14/03/2023');
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-        child: Expanded(
-      child: SizedBox(
-        height: 200,
-        child: FirebaseAnimatedList(
-            query: queryFirebase,
-            itemBuilder: (BuildContext context, DataSnapshot snapshot,
-                Animation<double> animation, int index) {
-              return Container(
-                margin: const EdgeInsets.all(15),
-                padding: const EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                    color: Colors.purple[300],
-                    borderRadius: const BorderRadius.all(Radius.circular(12))),
-                child: const Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        'Fecha registrada', //'Fecha registrada: ${snapshot.value['fecha'].toString()}',
-                        style: TextStyle(fontSize: 16, color: Colors.white),
-                      ),
-                      SizedBox(height: 5),
-                      Text(
-                        'Estado', //'Estado: ${snapshot.value['estado'].toString()}',
-                        style: TextStyle(fontSize: 16, color: Colors.white),
-                      ),
-                      SizedBox(height: 5),
-                    ]),
-              );
-            }),
-      ),
-    ));
+    return Column(
+      children: [
+        SingleChildScrollView(
+          child: FirebaseAnimatedList(
+              shrinkWrap: true,
+              defaultChild: const Text(
+                'Buscando...',
+                style: TextStyle(fontSize: 14, color: Colors.black87),
+              ),
+              query: queryFirebase,
+              itemBuilder: (context, snapshot, animation, index) {
+                return ListTile(
+                  leading: const Icon(Icons.data_array),
+                  title: Text(snapshot.child('fecha').toString()),
+                );
+              }),
+        )
+      ],
+    );
   }
 }
