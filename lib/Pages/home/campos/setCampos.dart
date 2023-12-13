@@ -32,12 +32,12 @@ class setCampos extends StatelessWidget {
             setFechAn(
               controller: fechAn,
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 15),
             //Fecha Posterior
             setFechPos(
               controller: fechPos,
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 15),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 30),
               width: MediaQuery.of(context).size.width - 80,
