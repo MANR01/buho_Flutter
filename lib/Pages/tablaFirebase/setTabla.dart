@@ -9,9 +9,8 @@ class setTabla extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10.0),
-      margin: const EdgeInsets.all(10.0),
-      child: const firebaseTable(),
-    );
+        padding: const EdgeInsets.all(10.0),
+        margin: const EdgeInsets.all(10.0),
+        child: const firebaseTable());
   }
 }

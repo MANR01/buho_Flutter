@@ -38,6 +38,7 @@ class setCampos extends StatelessWidget {
               controller: fechPos,
             ),
             const SizedBox(height: 15),
+            //Boton de busqueda
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 30),
               width: MediaQuery.of(context).size.width - 80,

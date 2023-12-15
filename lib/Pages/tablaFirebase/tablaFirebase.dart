@@ -12,7 +12,10 @@ class firebaseTable extends StatefulWidget {
 }
 
 class _firebaseTableState extends State<firebaseTable> {
-  final queryFirebase = FirebaseDatabase.instance.ref('maquina');
+  final queryFirebase = FirebaseDatabase.instance
+      .ref('maquina')
+      .orderByChild('fecha')
+      .limitToFirst(15);
 
   @override
   Widget build(BuildContext context) {
