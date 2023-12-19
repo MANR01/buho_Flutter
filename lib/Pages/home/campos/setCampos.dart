@@ -1,5 +1,6 @@
 // ignore_for_file: file_names, camel_case_types
 
+import 'package:buho/Pages/tablaFirebase/setTabla.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'components/fechAnterior.dart';
@@ -45,6 +46,11 @@ class setCampos extends StatelessWidget {
               child: OutlinedButton.icon(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
+                    //Tabla con la informacion de Firebase
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const setTabla()));
                   } else {
                     if (kDebugMode) {
                       print("Ocurrio un error al verificar los campos");

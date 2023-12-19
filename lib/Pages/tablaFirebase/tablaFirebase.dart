@@ -12,10 +12,8 @@ class firebaseTable extends StatefulWidget {
 }
 
 class _firebaseTableState extends State<firebaseTable> {
-  final queryFirebase = FirebaseDatabase.instance
-      .ref('maquina')
-      .orderByChild('fecha')
-      .limitToFirst(15);
+  final queryFirebase =
+      FirebaseDatabase.instance.ref('maquina').orderByChild('fecha');
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +21,7 @@ class _firebaseTableState extends State<firebaseTable> {
       children: [
         SingleChildScrollView(
           child: SizedBox(
-            height: 320,
+            height: 660,
             child: FirebaseAnimatedList(
                 shrinkWrap: true,
                 defaultChild: const Text(
@@ -33,6 +31,8 @@ class _firebaseTableState extends State<firebaseTable> {
                 query: queryFirebase,
                 itemBuilder: (context, snapshot, animation, index) {
                   return Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisSize: MainAxisSize.max,
                     children: [
                       Container(
                         decoration: BoxDecoration(
@@ -47,7 +47,7 @@ class _firebaseTableState extends State<firebaseTable> {
                           ),
                           subtitle: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.max,
+                            mainAxisSize: MainAxisSize.min,
                             children: [
                               Text('Hora: ${snapshot.child('hora').value}',
                                   style: const TextStyle(

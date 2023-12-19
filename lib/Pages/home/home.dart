@@ -1,7 +1,7 @@
 // ignore_for_file: camel_case_types, avoid_unnecessary_containers
 
 import 'package:buho/Pages/home/campos/setCampos.dart';
-import 'package:buho/Pages/tablaFirebase/setTabla.dart';
+//import 'package:buho/Pages/tablaFirebase/setTabla.dart';
 import 'package:flutter/material.dart';
 
 class home extends StatelessWidget {
@@ -44,10 +44,10 @@ class home extends StatelessWidget {
             setCampos(),
 
             //Tabla con la informacion de Firebase
-            Container(
+            /*Container(
               padding: const EdgeInsets.all(12.0),
               child: const setTabla(),
-            )
+            )*/
           ],
         ),
       ),

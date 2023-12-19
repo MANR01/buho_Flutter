@@ -8,9 +8,17 @@ class setTabla extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        padding: const EdgeInsets.all(10.0),
-        margin: const EdgeInsets.all(10.0),
-        child: const firebaseTable());
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.purple[200],
+      ),
+      body: Center(
+        child: Container(
+            padding: const EdgeInsets.all(10.0),
+            margin: const EdgeInsets.all(10.0),
+            child: const firebaseTable()),
+      ),
+    );
   }
 }
