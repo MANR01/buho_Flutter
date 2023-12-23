@@ -1,8 +1,10 @@
 // ignore_for_file: file_names, camel_case_types
 
+import 'package:buho/Services/Provider/provider.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class firebaseTable extends StatefulWidget {
   const firebaseTable({super.key});
@@ -12,11 +14,17 @@ class firebaseTable extends StatefulWidget {
 }
 
 class _firebaseTableState extends State<firebaseTable> {
-  final queryFirebase =
-      FirebaseDatabase.instance.ref('maquina').orderByChild('fecha');
-
   @override
   Widget build(BuildContext context) {
+    final fechAn = context.watch<datosProvider>().fechAn.toString();
+    final fechPos = context.watch<datosProvider>().fechPos.toString();
+    final queryFirebase = FirebaseDatabase.instance
+        .ref('maquina')
+        .orderByChild('fecha')
+        .startAt(fechAn)
+        .endAt(fechPos);
+
+    //final Size size = MediaQuery.of(context).size;
     return Column(
       children: [
         SingleChildScrollView(

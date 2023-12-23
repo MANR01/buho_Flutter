@@ -1,5 +1,7 @@
 import 'package:buho/Pages/home/home.dart';
+import 'package:buho/Services/Provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
 import 'Services/Firebase/firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -18,7 +20,8 @@ Future<void> main() async {
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   setup();
 
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+      create: (_) => datosProvider(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -34,6 +37,6 @@ class MyApp extends StatelessWidget {
 }
 
 void setup() async {
-  await Future.delayed(const Duration(seconds: 5));
+  await Future.delayed(const Duration(seconds: 4));
   FlutterNativeSplash.remove();
 }

@@ -17,6 +17,7 @@ dependencies:
 
   mask_text_input_formatter: ^2.4.0
   flutter_native_splash: ^2.3.8 # Crear Pantalla Splash
+  provider: ^6.1.1 #Mover informacion dentro del documento
 
 dev_dependencies:
   flutter_test:
